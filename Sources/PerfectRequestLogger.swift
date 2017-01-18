@@ -2,6 +2,9 @@ import PerfectLib
 import PerfectHTTP
 import PerfectNet
 import Foundation
+#if os(Linux)
+    import ClibBSD
+#endif;
 
 public class RequestLogger: HTTPRequestFilter, HTTPResponseFilter {
 
